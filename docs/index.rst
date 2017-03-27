@@ -106,7 +106,7 @@ library and establishes a connection::
 Receiving Messages
 ------------------
 
-When using SocketIO, messages are received by both parties as events. On the
+When using SocketIO, messages are received as events. On the
 client side Javascript callbacks are used. With Flask-SocketIO the server
 needs to register handlers for these events, similarly to how routes are
 handled by view functions.
@@ -171,7 +171,7 @@ client as arguments in the callback function::
 
 In the above example, the client callback function will be invoked with
 two arguments, ``'one'`` and ``2``. If a handler function does not return any
-vallues, the client callback function will be invoked without arguments.
+values, the client callback function will be invoked without arguments.
 
 Sending Messages
 ----------------
@@ -232,7 +232,7 @@ When using callbacks the Javascript client receives a callback function to
 invoke upon receipt of the message. After the client application invokes the
 callback function the server invokes the corresponding server-side callback.
 If the client-side callback returns any values, these are provided as
-arguments to the server-side callback.
+arguments to the server-side callback. 
 
 The client application can also request an acknoledgement callback for an
 event sent to the server. If the server wants to provide arguments for this
